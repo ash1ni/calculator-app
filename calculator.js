@@ -21,7 +21,7 @@ app.get("/", (req, res)=>{
     res.send("The result of the calculation is "+ result)
  })
   
-
+ //adding bmi calculator
  app.get("/bmicalculator", (req, res)=>{
     res.sendFile(__dirname+"/BMICalculator.html")
  })
