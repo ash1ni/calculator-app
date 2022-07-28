@@ -30,4 +30,4 @@ app.get("/", (req, res)=>{
     var height = Number(req.body.height)
     var n = Math.floor(weight/(height*height))
     res.send("Your BMI is "+n)
- })
+ });
