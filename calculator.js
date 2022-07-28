@@ -20,3 +20,14 @@ app.get("/", (req, res)=>{
     //console.log(req.body)
     res.send("The result of the calculation is "+ result)
  })
+  
+
+ app.get("/bmicalculator", (req, res)=>{
+    res.sendFile(__dirname+"/BMICalculator.html")
+ })
+ app.post("/bmicalculator", (req,res)=>{
+    var weight = Number(req.body.weight)
+    var height = Number(req.body.height)
+    var n = Math.floor(weight/(height*height))
+    res.send("Your BMI is "+n)
+ })
